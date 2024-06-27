@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/afrika1991mike/-cit262-mike-test/issues"
   },
-  "homepage": "https://github.com/afrika1991mike/-cit262-mike-test#readme"
-} 
+  "homepage": "https://github.com/afrika1991mike/-cit262-mike-test#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
