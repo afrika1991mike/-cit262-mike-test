@@ -1,0 +1,23 @@
+{"name": "-cit262-mike-test",
+  "version": "1.0.0",
+  "description": "This is my beginning first nodeJS project!",
+  "main": "index.js",
+  "scripts": {
+  
+    "test":"jest"
+  
+  },
+  "author": "Mike",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/afrika1991mike/-cit262-mike-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/afrika1991mike/-cit262-mike-test/issues"
+  },
+  "homepage": "https://github.com/afrika1991mike/-cit262-mike-test#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
