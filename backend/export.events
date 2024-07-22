@@ -1,0 +1,29 @@
+exports.event = async function event(req, res) {
+  if (req.method !== 'GET') {
+    res.writeHead(405, statusCodes[405]);
+    res.end();
+    return;
+  }
+
+  const eventId = req.url.split('/').pop();
+
+  const params = {
+    TableName: 'Events',
+    Key: { id: eventId }
+  };
+
+  try {
+    const data = await dynamodb.get(params).promise();
+    if (data.Item) {
+      res.writeHead(200, statusCodes[200]);
+      res.end(JSON.stringify(data.Item));
+    } else {
+      res.writeHead(404, statusCodes[404]);
+      res.end();
+    }
+  } catch (error) {
+    console.error(error);
+    res.writeHead(500, statusCodes[500]);
+    res.end();
+  }
+};
